@@ -9,11 +9,10 @@ public class MultithreadingBasicsOne {
 			public void run() {
 				System.out.println("Inside my parallel thread " + Thread.currentThread().getName());
 				System.out.println("My priority is " + Thread.currentThread().getPriority());
-				throw new RuntimeException("I'm going rouge");
+				//throw new RuntimeException("I'm going rouge");
 			}
-		});
+		}, "myThread");
 
-		myThread.setName("myThread");
 		myThread.setPriority(Thread.MAX_PRIORITY);
 		myThread.start();
 		
