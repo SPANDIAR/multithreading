@@ -11,13 +11,13 @@ public class MultithreadingBasicsOne {
 			}
 		});
 
+		myThread.setName("myThread");
 		myThread.start();
 
 		System.out.println("Before going to sleep " + Thread.currentThread().getName());
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("after waking up " + Thread.currentThread().getName());
