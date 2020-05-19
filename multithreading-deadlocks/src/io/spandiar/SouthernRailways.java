@@ -86,14 +86,13 @@ public class SouthernRailways {
 
 		public void lockBangaloreToChennai() {
 
-			synchronized (VaniyampadiToAmbur) {
-				System.out.println("Locked VaniyampadiToAmbur: " + Thread.currentThread().getName());
+			synchronized (AmburToVaniyampadi) {
+				System.out.println("Locked AmburToVaniyampadi: " + Thread.currentThread().getName());
 
-				synchronized (AmburToVaniyampadi) {
-					System.out.println("Locked AmburToVaniyampadi: " + Thread.currentThread().getName());
+				synchronized (VaniyampadiToAmbur) {
+					System.out.println("Locked VaniyampadiToAmbur: " + Thread.currentThread().getName());
 				}
 			}
-
 		}
 
 		public void lockChennaiToBangalore() {
