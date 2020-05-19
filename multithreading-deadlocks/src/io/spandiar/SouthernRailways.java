@@ -2,6 +2,8 @@ package io.spandiar;
 
 import java.util.Random;
 
+// Class demonstrating thread deadlocks
+
 public class SouthernRailways {
 
 	public static void main(String[] args) {
